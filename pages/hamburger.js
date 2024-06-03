@@ -1,7 +1,7 @@
 // components/HamburgerMenu.js
 
 import { useState } from 'react';
-
+import Link from 'next/link';
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,28 +24,28 @@ const HamburgerMenu = () => {
           />
         </svg>
       </button>
-
+      
       <nav className={`${isOpen ? 'block' : 'hidden'} lg:flex`}>
         <ul className="lg:flex  items-center">
           <li>
-            <a href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
+            <Link href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
+            <Link href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
+            <Link href="#" className="text-gray-700 hover:text-gray-900 lg:mx-3">
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="text-gray-700 hover:text-red-900 lg:mx-3">
+            <Link href="/" className="text-gray-700 hover:text-red-900 lg:mx-3">
               Log out
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

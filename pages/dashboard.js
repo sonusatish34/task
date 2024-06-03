@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Loader from './loader';
 import HamburgerMenu from './hamburger';
 export default function Dashboard({ cars }) {
-  const [loading, setLoading] = useState(true); // State to manage loading
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setLoading(false); // Set loading to false once data is fetched
+    setLoading(false); 
   }, []);
 
   return (
@@ -31,20 +31,14 @@ export default function Dashboard({ cars }) {
                     />
                   </li>
                 )}
-                {/* Uncomment below lines if needed */}
-                {/* <li className='text-sm text-red-600'>User contact: {item.user_phone}</li>
-          <li className='text-sm text-red-600'>{item.maker_model}</li> */}
               </ul>
             </div>
           </div>
         ))}
       </div>
     </div>
-
-
   );
 }
-
 
 export async function getStaticProps() {
   const response = await fetch('https://longdrivecarz.in/util/testing-home?limit=200');
