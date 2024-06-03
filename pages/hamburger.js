@@ -42,6 +42,11 @@ const HamburgerMenu = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a href="/" className="text-gray-700 hover:text-red-900 lg:mx-3">
+              Log out
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
